@@ -6,6 +6,8 @@
 
 ## Command execute from any directory [here directory path has been mentioned] 
 
+### searching date and time wise
+
     find /var/opt/mssql/data/mssqllinux/* -type f ! -name "*.trn" -newermt '26 Jun 2022 23:00:00' -exec ls -la {} \;
     
     find /var/opt/mssql/data/mssqllinux/* -type f ! -name "*.trn" -newermt '26 Jun 2022' -exec ls -la {} \;
@@ -18,6 +20,10 @@
     
 ## Command execute from any directory [here directory path has been mentioned] 
 
+### searching day wise [ -mtime +0  0 means today 1 means yeasterday ...... ]
+
     find /var/opt/mssql/data/mssqllinux/ -name "*.bak" -type f -mtime +0 -print
+    
+### searching minutes wise [ -amin +760 ]
 
     find /var/opt/mssql/data/mssqllinux/ -name "*.log" -type f -amin +760 -print
