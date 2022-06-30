@@ -20,7 +20,7 @@
     
 ## Command execute from any directory [here directory path has been mentioned] 
 
-### searching day wise [ -mtime +0  0 means today 1 means yeasterday ...... ]
+### searching day wise [ -mtime +0  0 means today 1 means yeasterday ...... -1 means today/current date ]
 
     find /var/opt/mssql/data/mssqllinux/ -name "*.bak" -type f -mtime +0 -print
     
